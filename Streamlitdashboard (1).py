@@ -62,7 +62,7 @@ def fetch_full_log(station_id):
         df = pd.read_sql(query, conn, params=[station_id])
         
         # Format Timestamp for display but keep original for sorting if needed
-        df['Log Time'] = df['Timestamp'].dt.strftime('%d-%MMM-%Y | %I:%M:%S %p')
+        df['Log Time'] = df['Timestamp'].dt.strftime('%d-%m-%Y | %I:%M:%S %p')
 
         def map_values(model):
             return MODEL_THRESHOLDS.get(model, [0.0, 0.0, 0.0])
@@ -243,3 +243,4 @@ else:
 
     # Execute the live fragment
     live_dashboard()
+
