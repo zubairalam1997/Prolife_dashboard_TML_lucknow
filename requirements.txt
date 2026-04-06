@@ -2,3 +2,4 @@ streamlit==1.32.0
 pandas==2.2.1
 pyodbc==5.1.0
 plotly==5.19.0
+pymcprotocol==0.5.6
